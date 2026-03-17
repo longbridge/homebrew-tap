@@ -5,7 +5,6 @@ Official [Homebrew](https://brew.sh) tap for [Longbridge](https://longbridge.com
 ## Install
 
 ```bash
-brew tap longbridge/tap
 brew install longbridge/tap/longbridge-terminal
 ```
 
@@ -24,5 +23,5 @@ longbridge -h
 ## Update
 
 ```bash
-brew upgrade longbridge/tap/longbridge-terminal
+brew upgrade longbridge-terminal
 ```
