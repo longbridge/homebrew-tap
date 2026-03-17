@@ -5,7 +5,7 @@ Official [Homebrew](https://brew.sh) tap for [Longbridge](https://longbridge.com
 ## Install
 
 ```bash
-brew install longbridge/tap/longbridge-terminal
+brew install --cask longbridge/tap/longbridge-terminal
 ```
 
 ## Usage
@@ -16,12 +16,12 @@ longbridge -h
 
 ## Packages
 
-| Formula | Description |
-|---------|-------------|
+| Cask | Description |
+|------|-------------|
 | `longbridge-terminal` | Longbridge Terminal CLI for US and HK stock market data and trading |
 
 ## Update
 
 ```bash
-brew upgrade longbridge-terminal
+brew upgrade --cask longbridge-terminal
 ```
