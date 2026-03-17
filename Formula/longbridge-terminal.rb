@@ -1,7 +1,7 @@
 class LongbridgeTerminal < Formula
   desc "Longbridge Terminal CLI for US and HK stock market data and trading"
   homepage "https://github.com/longbridge/longbridge-terminal"
-  version "0.7.0-preview2"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
