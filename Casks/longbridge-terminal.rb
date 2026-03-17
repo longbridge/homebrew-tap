@@ -16,6 +16,11 @@ cask "longbridge-terminal" do
 
   binary "longbridge"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-dr", "com.apple.quarantine", staged_path]
+  end
+
   caveats <<~EOS
     Get started by running:
       longbridge -h
