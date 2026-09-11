@@ -1,14 +1,14 @@
 cask "longbridge-terminal" do
-  version "0.28.5"
+  version "0.28.6"
 
   on_arm do
-    url "https://github.com/longbridge/longbridge-terminal/releases/download/v0.28.5/longbridge-terminal-darwin-arm64.tar.gz"
-    sha256 "9b19260ce2daea808fb92c121af58b9687b8ff5710c44f9adc7af94a531bb3c8"
+    url "https://github.com/longbridge/longbridge-terminal/releases/download/v0.28.6/longbridge-terminal-darwin-arm64.tar.gz"
+    sha256 "063a3a55e612e5917d74a66220611276e7f08026c2addc05fc3d836c5d9a1842"
   end
 
   on_intel do
-    url "https://github.com/longbridge/longbridge-terminal/releases/download/v0.28.5/longbridge-terminal-darwin-amd64.tar.gz"
-    sha256 "bbe53b8dc02488e605840358fa2c3d75ca6d753a7aee193eb485a7b9d386afa0"
+    url "https://github.com/longbridge/longbridge-terminal/releases/download/v0.28.6/longbridge-terminal-darwin-amd64.tar.gz"
+    sha256 "2a6625cf6fec4bbf649e351a144f5ba0b0e9acab5728acbd870e676314e1e95e"
   end
 
   desc "Longbridge Terminal CLI for US and HK stock market data and trading"
