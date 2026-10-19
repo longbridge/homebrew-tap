@@ -1,0 +1,43 @@
+name: NSH formula
+
+on:
+  pull_request:
+    paths:
+      - Formula/nsh.rb
+      - .github/workflows/nsh.yml
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    name: Install and test on Apple silicon
+    runs-on: macos-15
+    timeout-minutes: 15
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_ANALYTICS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: homebrew-tap
+          persist-credentials: false
+
+      - name: Use the pull request's tap
+        run: |
+          test "$(uname -m)" = "arm64"
+          tap_dir="$(brew --repository)/Library/Taps/longbridge"
+          mkdir -p "$tap_dir"
+          ln -s "$GITHUB_WORKSPACE/homebrew-tap" "$tap_dir/homebrew-tap"
+
+      - name: Check formula style
+        run: brew style --formula longbridge/tap/nsh
+
+      - name: Audit formula
+        run: brew audit --strict --formula longbridge/tap/nsh
+
+      - name: Install release and verify checksum
+        run: brew install --formula longbridge/tap/nsh
+
+      - name: Test CLI and bundled web runtime
+        run: brew test longbridge/tap/nsh
