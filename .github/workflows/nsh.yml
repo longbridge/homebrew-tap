@@ -29,6 +29,7 @@ jobs:
           tap_dir="$(brew --repository)/Library/Taps/longbridge"
           mkdir -p "$tap_dir"
           ln -s "$GITHUB_WORKSPACE/homebrew-tap" "$tap_dir/homebrew-tap"
+          brew trust longbridge/tap
 
       - name: Check formula style
         run: brew style --formula longbridge/tap/nsh
