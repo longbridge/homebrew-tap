@@ -28,6 +28,8 @@ class Nsh < Formula
   test do
     assert_match "nsh #{version}", shell_output("#{bin}/nsh --version")
     system bin/"nsh", "init", "hello"
-    assert_path_exists testpath/"hello"
+    # Since 0.5.0 runtimes are installed on demand into libexec, which the
+    # test sandbox cannot write, so only check the scaffolded project here.
+    assert_predicate testpath/"hello", :directory?
   end
 end
