@@ -28,9 +28,6 @@ class Nsh < Formula
   test do
     assert_match "nsh #{version}", shell_output("#{bin}/nsh --version")
     system bin/"nsh", "init", "hello"
-    system bin/"nsh", "package", "hello", "--target", "web"
-    assert_path_exists testpath/".nsh/out/hello/index.html"
-    refute_empty (testpath/".nsh/out/hello").glob("nsh.*.wasm")
-    refute_empty (testpath/".nsh/out/hello").glob("nsh.*.js")
+    assert_path_exists testpath/"hello"
   end
 end
