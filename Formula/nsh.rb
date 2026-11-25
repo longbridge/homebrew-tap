@@ -4,8 +4,8 @@ class Nsh < Formula
   desc "Native UI from TSX modules, with a CLI and prebuilt runtimes"
   homepage "https://nsh.dev"
   # A default URL lets unsupported architectures reach the requirements check.
-  url "https://github.com/longbridge/nsh/releases/download/v0.7.0/nsh-macos-arm64.tar.gz"
-  sha256 "5b2e5385e09a65ed63b178a8dd9cef03a9dcab204d2efc942300e0c5baea3853"
+  url "https://github.com/longbridge/nsh/releases/download/v0.7.1/nsh-macos-arm64.tar.gz"
+  sha256 "28e349b59c0b46e964010c8f858a78af5db4d26012d213c03d15ce28ddff0650"
   license "Apache-2.0"
 
   on_macos do
@@ -16,8 +16,8 @@ class Nsh < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/longbridge/nsh/releases/download/v0.7.0/nsh-linux-x86_64.tar.gz"
-      sha256 "d281bfa3d93d84e9831e1a97dfdb63104329fcc87a0a48c78db5aeabb00c0073"
+      url "https://github.com/longbridge/nsh/releases/download/v0.7.1/nsh-linux-x86_64.tar.gz"
+      sha256 "04457ad3a53c91b66efcee537968c5af7c90df25cf61c18d51135ecc051e22b3"
     end
   end
 
